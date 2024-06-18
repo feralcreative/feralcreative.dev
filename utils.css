@@ -1,0 +1,528 @@
+/*
+Feral Creative CSS Utilities
+Updated: 18 Jun 2024 0727 PDT (UTC−07:00)
+
+To use these, add this to your CSS file:
+| @import url("https://dev.feralcreative.co/utils.css");
+| @import url("https://securesite.dev/utils.css");
+* Minified
+| @import url("https://dev.feralcreative.co/utils.min.css");
+| @import url("https://securesite.dev/utils.min.css");
+
+or this to your HTML doc:
+| <link rel="stylesheet" href="https://dev.feralcreative.co/utils.css" type="text/css">
+| <link rel="stylesheet" href="https://securesite.dev/utils.css" type="text/css">
+
+* Minified
+| <link rel="stylesheet" href="https://dev.feralcreative.co/utils.min.css" type="text/css">
+| <link rel="stylesheet" href="https://securesite.dev/utils.min.css" type="text/css">
+
+^^ Ziad Ezzat
+^^ Feral Creative Colony
+^^ Oakland, California
+^^ (510) 500-5456
+^^ ziad@feralcreative.co
+^^ https://feralcreative.co
+
+| Highlight
+* Important
+! Alert
+? Question
+// Dark
+TODO: To do
+-  Strikethrough (triple dash)
+^^ Notes
+*/
+
+
+:root {
+  --fpo: #ff00ff;
+  --fpom: #ff00ff;
+  --fpop: #9B00FF;
+  --fpoc: #00ffff;
+  --fpoy: #cccc00;
+  --fpor: #ff0000;
+  --fpog: #00aa00;
+  --fpob: #0000ff;
+  --fpoo: #964B00;
+  --fpoor: #FFA503;
+  --fpo-bg: #ff00ff22;
+  --fpom-bg: #ff00ff22;
+  --fpop-bg: #9B00FF44;
+  --fpoc-bg: #00ffff33;
+  --fpoy-bg: #cccc0022;
+  --fpor-bg: #ff000022;
+  --fpog-bg: #00aa0033;
+  --fpob-bg: #0000ff22;
+  --fpoo-bg: #964B0033;
+  --fpoor-bg: #FFA50333;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.hidden,
+.hide,
+.invisible {
+  visibility: none;
+}
+
+.fpob.bg {
+  background: var(--fpob-bg);
+}
+
+.fpop {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpop);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpop);
+  box-shadow: inset 0px 0px 0px 2px var(--fpop);
+}
+
+.fpop.bg {
+  background: var(--fpop-bg);
+}
+
+.fpor {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpor);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpor);
+  box-shadow: inset 0px 0px 0px 2px var(--fpor);
+}
+
+.fpor.bg {
+  background: var(--fpor-bg);
+}
+
+.fpoo {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpoo);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpoo);
+  box-shadow: inset 0px 0px 0px 2px var(--fpoo);
+}
+
+.fpoor {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpoor);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpoor);
+  box-shadow: inset 0px 0px 0px 2px var(--fpoor);
+}
+
+.fpoo.bg {
+  background: var(--fpoo-bg);
+}
+
+.fpoor.bg {
+  background: var(--fpoor-bg);
+}
+
+.fpoy {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpoy);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpoy);
+  box-shadow: inset 0px 0px 0px 2px var(--fpoy);
+}
+
+.fpoy.bg {
+  background: var(--fpoy-bg);
+}
+
+.fpog {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpog);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpog);
+  box-shadow: inset 0px 0px 0px 2px var(--fpog);
+}
+
+.fpog.bg {
+  background: var(--fpog-bg);
+}
+
+.fpoc {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpoc);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpoc);
+  box-shadow: inset 0px 0px 0px 2px var(--fpoc);
+}
+
+.fpoc.bg {
+  background: var(--fpoc-bg);
+}
+
+.fpob {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpob);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpob);
+  box-shadow: inset 0px 0px 0px 2px var(--fpob);
+}
+
+.fpob.bg {
+  background: var(--fpob-bg);
+}
+
+.fpo,
+.fpom {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpo);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpo);
+  box-shadow: inset 0px 0px 0px 2px var(--fpo);
+}
+
+.fpo.bg,
+.fpom.bg {
+  background: var(--fpom-bg);
+}
+
+
+.fpo.out,
+.fpom.out,
+.fpop.out,
+.fpor.out,
+.fpoc.out,
+.fpoy.out,
+.fpog.out,
+.fpob.out,
+.fpoo.out,
+.fpoor.out {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid;
+}
+
+.fpo.out,
+fpom.out {
+  border-color: var(--fpom);
+}
+
+
+.fpop.out {
+  border-color: var(--fpop);
+}
+
+.fpoc.out {
+  border-color: var(--fpoc);
+}
+
+.fpoy.out {
+  border-color: var(--fpoy);
+}
+
+.fpor.out {
+  border-color: var(--fpor);
+
+}
+
+.fpog.out {
+  border-color: var(--fpog);
+}
+
+.fpob.out {
+  border-color: var(--fpob);
+}
+
+.fpoo.out {
+  border-color: var(--fpoo);
+}
+
+.fpoor.out {
+  border-color: var(--fpoor);
+}
+
+
+fpom .nc::before {
+  content: 'NEED CONTENT \A';
+  font-size: inherit !important;
+
+}
+
+.li::before {
+  content: 'FPO \A';
+  font-size: inherit !important;
+
+}
+
+.nc::before {
+  content: 'NEED CONTENT \A';
+  font-size: inherit;
+  ;
+}
+
+.nc::before,
+.li::before {
+  font-weight: bold;
+  color: #f0f;
+  white-space: pre-wrap;
+  font-size: inherit !important;
+}
+
+.li,
+.nc {
+  background-color: #dd00dd22;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: inherit !important;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+pre {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #880088;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+}
+
+
+.white {
+  color: white !important;
+}
+
+img.sample,
+img.placeholder,
+img.missing {
+  background-color: lightgray;
+}
+
+.fpo-image {
+  background-image: url('https://dev.feralcreative.co/media/fpo.png');
+  background-size: repeat;
+}
+
+.fpo-overlay::before {
+  content: 'FPO';
+  font-size: 10vh;
+  line-height: 1em;
+  font-weight: 700;
+  position: relative;
+  z-index: 999;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FF00FF66;
+  text-align: center
+}
+
+/*| VIEWPORT WIDGET */
+/* 
+<section class="viewport-widget top container-fluid">
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <div class="viewport-size">Viewport: </div>
+    </div>
+</section> 
+*/
+body.viewport-widget {
+  padding-top: 25px !important;
+}
+
+.viewport-widget {
+  width: 100vw !important;
+  margin: 0 !important;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: .95;
+}
+
+.viewport-size {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1em;
+  color: white;
+  padding: 5px;
+  font-weight: 400;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.viewport-widget.top {
+  top: 0;
+}
+
+.viewport-widget.bottom {
+  bottom: 0;
+}
+
+
+
+/* | Flexbox */
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex.center {
+  align-items: center;
+}
+
+.flex.middle {
+  justify-items: center;
+
+}
+
+.flex.stretch {
+  align-items: stretch;
+}
+
+.flex.reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-10 {
+  flex: 10%;
+}
+
+.flex-20 {
+  flex: 20%;
+}
+
+.flex-30 {
+  flex: 30%;
+}
+
+.flex-40 {
+  flex: 40%;
+}
+
+.flex-50 {
+  flex: 50%;
+}
+
+.flex-60 {
+  flex: 60%;
+}
+
+.flex-70 {
+  flex: 70%;
+}
+
+.flex-80 {
+  flex: 80%;
+}
+
+.flex-90 {
+  flex: 90%;
+}
+
+.flex-100 {
+  flex: 100%;
+}
+
+/*| BOOTSTRAP COLUMN WIDGET */
+.grid-widget {
+  position: fixed !important;
+  width: 100vw !important;
+  margin: auto !important;
+  top: 0 !important;
+  left: 0 !important;
+  min-height: 100vh !important;
+  z-index: 999 !important;
+}
+
+.grid-widget .grid-column {
+  font-size: 2vw !important;
+  font-weight: 500 !important;
+  padding: 0;
+  padding-top: 50px !important;
+  color: #ff00ff99;
+  text-align: center !important;
+  border: 0.5px solid #ff00ff;
+  background-color: #ff00ff22;
+  min-height: 100vh !important;
+  width: calc(8.33vw - 27.5px);
+  margin: 0 15px;
+}
+
+.grid-widget .grid-column:first-child {
+  margin: 0 15px 0 0;
+}
+
+.grid-widget .grid-column:last-child {
+  margin: 0 0 0 15px;
+}
+
+/* LG */
+@media (min-width:1200px) {
+  .viewport-size {
+    background-color: red;
+  }
+
+  .viewport-size::after {
+    content: 'Lg (>1200px)';
+    font-weight: 600;
+  }
+}
+
+/* MD */
+@media (min-width:992px) and (max-width:1199px) {
+  .viewport-size {
+    background-color: orange;
+  }
+
+  .viewport-size::after {
+    content: 'MD (992 - 1199px)';
+    font-weight: 600;
+  }
+}
+
+/* SM */
+@media (min-width:768px) and (max-width:991px) {
+  .viewport-size {
+    background-color: green;
+  }
+
+  .viewport-size::after {
+    content: 'SM (768 - 991px)';
+    font-weight: 600;
+  }
+}
+
+/* XS */
+@media (max-width:767px) {
+  .viewport-size {
+    background-color: magenta;
+  }
+
+  .viewport-size::after {
+    content: 'XS (<767px)';
+    font-weight: 600;
+  }
+}
+
+/*| DIV COLORING WIDGET */
+/* 
+section {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpor);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpor);
+  box-shadow: inset 0px 0px 0px 2px var(--fpor);
+  background-color: var(--fpor-bg)
+}
+div {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpo);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpo);
+  box-shadow: inset 0px 0px 0px 2px var(--fpo);
+  background-color: var(--fpo-bg)
+}
+div>div {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpoc);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpoc);
+  box-shadow: inset 0px 0px 0px 2px var(--fpoc);
+  background-color: var(--fpoc-bg)
+}
+div>div>div {
+  -webkit-box-shadow: inset 0px 0px 0px 2px var(--fpoo);
+  -moz-box-shadow: inset 0px 0px 0px 2px var(--fpoo);
+  box-shadow: inset 0px 0px 0px 2px var(--fpoo);
+  background-color: var(--fpoo-bg)
+}
+ */
