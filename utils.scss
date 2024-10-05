@@ -1,5 +1,5 @@
-@charset "UTF-8";
 /*! Feral Creative CSS Utilities: https://feralcreative.co */
+
 /*
 Updated: 05 OCT 2024 1602 PDT (UTC−07:00)
 
@@ -34,6 +34,29 @@ TODO: To do
 -  Strikethrough (triple dash)
 ^^ Notes
 */
+
+$feral: #808;
+$fpo: #f0f;
+$fpom: #f0f;
+$fpop: #9b00ff;
+$fpoc: #0ff;
+$fpoy: #cc0;
+$fpor: #f00;
+$fpog: #0a0;
+$fpob: #00f;
+$fpoo: #964b00;
+$fpoor: #ffa503;
+$fpo-bg: #ff00ff22;
+$fpom-bg: #ff00ff22;
+$fpop-bg: #9b00ff44;
+$fpoc-bg: #00ffff33;
+$fpoy-bg: #cccc0022;
+$fpor-bg: #ff000022;
+$fpog-bg: #00aa0033;
+$fpob-bg: #0000ff22;
+$fpoo-bg: #964b0033;
+$fpoor-bg: #ffa50333;
+
 .absolute {
   position: absolute !important;
 }
@@ -45,81 +68,99 @@ TODO: To do
 }
 
 .fpob.bg {
-  background: rgba(0, 0, 255, 0.1333333333);
+  background: $fpob-bg;
 }
 
 .fpop {
-  box-shadow: inset 0px 0px 0px 2px #9b00ff;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpop;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpop;
+  box-shadow: inset 0px 0px 0px 2px $fpop;
 }
 
 .fpop.bg {
-  background: rgba(155, 0, 255, 0.2666666667);
+  background: $fpop-bg;
 }
 
 .fpor {
-  box-shadow: inset 0px 0px 0px 2px #f00;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpor;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpor;
+  box-shadow: inset 0px 0px 0px 2px $fpor;
 }
 
 .fpor.bg {
-  background: rgba(255, 0, 0, 0.1333333333);
+  background: $fpor-bg;
 }
 
 .fpoo {
-  box-shadow: inset 0px 0px 0px 2px #964b00;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpoo;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpoo;
+  box-shadow: inset 0px 0px 0px 2px $fpoo;
 }
 
 .fpoor {
-  box-shadow: inset 0px 0px 0px 2px #ffa503;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpoor;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpoor;
+  box-shadow: inset 0px 0px 0px 2px $fpoor;
 }
 
 .fpoo.bg {
-  background: rgba(150, 75, 0, 0.2);
+  background: $fpoo-bg;
 }
 
 .fpoor.bg {
-  background: rgba(255, 165, 3, 0.2);
+  background: $fpoor-bg;
 }
 
 .fpoy {
-  box-shadow: inset 0px 0px 0px 2px #cc0;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpoy;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpoy;
+  box-shadow: inset 0px 0px 0px 2px $fpoy;
 }
 
 .fpoy.bg {
-  background: rgba(204, 204, 0, 0.1333333333);
+  background: $fpoy-bg;
 }
 
 .fpog {
-  box-shadow: inset 0px 0px 0px 2px #0a0;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpog;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpog;
+  box-shadow: inset 0px 0px 0px 2px $fpog;
 }
 
 .fpog.bg {
-  background: rgba(0, 170, 0, 0.2);
+  background: $fpog-bg;
 }
 
 .fpoc {
-  box-shadow: inset 0px 0px 0px 2px #0ff;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpoc;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpoc;
+  box-shadow: inset 0px 0px 0px 2px $fpoc;
 }
 
 .fpoc.bg {
-  background: rgba(0, 255, 255, 0.2);
+  background: $fpoc-bg;
 }
 
 .fpob {
-  box-shadow: inset 0px 0px 0px 2px #00f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpob;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpob;
+  box-shadow: inset 0px 0px 0px 2px $fpob;
 }
 
 .fpob.bg {
-  background: rgba(0, 0, 255, 0.1333333333);
+  background: $fpob-bg;
 }
 
 .fpo,
 .fpom {
-  box-shadow: inset 0px 0px 0px 2px #f0f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $fpo;
+  -moz-box-shadow: inset 0px 0px 0px 2px $fpo;
+  box-shadow: inset 0px 0px 0px 2px $fpo;
 }
 
 .fpo.bg,
 .fpom.bg {
-  background: rgba(255, 0, 255, 0.1333333333);
+  background: $fpom-bg;
 }
 
 .fpo.out,
@@ -132,73 +173,75 @@ TODO: To do
 .fpob.out,
 .fpoo.out,
 .fpoor.out {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   border: 1px solid;
 }
 
 .fpo.out,
 fpom.out {
-  border-color: #f0f;
+  border-color: $fpom;
 }
 
 .fpop.out {
-  border-color: #9b00ff;
+  border-color: $fpop;
 }
 
 .fpoc.out {
-  border-color: #0ff;
+  border-color: $fpoc;
 }
 
 .fpoy.out {
-  border-color: #cc0;
+  border-color: $fpoy;
 }
 
 .fpor.out {
-  border-color: #f00;
+  border-color: $fpor;
 }
 
 .fpog.out {
-  border-color: #0a0;
+  border-color: $fpog;
 }
 
 .fpob.out {
-  border-color: #00f;
+  border-color: $fpob;
 }
 
 .fpoo.out {
-  border-color: #964b00;
+  border-color: $fpoo;
 }
 
 .fpoor.out {
-  border-color: #ffa503;
+  border-color: $fpoor;
 }
 
 fpom .nc::before {
-  content: "NEED CONTENT \a";
+  content: "NEED CONTENT \A";
   font-size: inherit !important;
 }
 
 .li::before {
-  content: "FPO \a";
+  content: "FPO \A";
   font-size: inherit !important;
 }
 
 .nc::before {
-  content: "NEED CONTENT \a";
+  content: "NEED CONTENT \A";
   font-size: inherit;
 }
 
 .nc::before,
 .li::before {
   font-weight: bold;
-  color: #f0f;
+  color: $fpom;
   white-space: pre-wrap;
   font-size: inherit !important;
 }
 
 .li,
 .nc {
-  background-color: rgba(221, 0, 221, 0.1333333333);
+  background-color: #dd00dd22;
   border-radius: 5px;
   padding: 5px;
   font-size: inherit !important;
@@ -250,7 +293,7 @@ img.missing {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(255, 0, 255, 0.4);
+  color: #ff00ff66;
   text-align: center;
 }
 
@@ -300,6 +343,7 @@ body.viewport-widget {
 }
 
 /* | Flexbox */
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -378,10 +422,10 @@ body.viewport-widget {
   font-weight: 500 !important;
   padding: 0;
   padding-top: 50px !important;
-  color: rgba(255, 0, 255, 0.6);
+  color: #ff00ff99;
   text-align: center !important;
   border: 0.5px solid #ff00ff;
-  background-color: rgba(255, 0, 255, 0.1333333333);
+  background-color: #ff00ff22;
   min-height: 100vh !important;
   width: calc(8.33vw - 27.5px);
   margin: 0 15px;
@@ -400,41 +444,49 @@ body.viewport-widget {
   .viewport-size {
     background-color: red;
   }
+
   .viewport-size::after {
     content: "Lg (>1200px)";
     font-weight: 600;
   }
 }
+
 /* MD */
 @media (min-width: 992px) and (max-width: 1199px) {
   .viewport-size {
-    background-color: #ffa503;
+    background-color: $fpoor;
   }
+
   .viewport-size::after {
     content: "MD (992 - 1199px)";
     font-weight: 600;
   }
 }
+
 /* SM */
 @media (min-width: 768px) and (max-width: 991px) {
   .viewport-size {
-    background-color: #0a0;
+    background-color: $fpog;
   }
+
   .viewport-size::after {
     content: "SM (768 - 991px)";
     font-weight: 600;
   }
 }
+
 /* XS */
 @media (max-width: 767px) {
   .viewport-size {
-    background-color: #f0f;
+    background-color: $fpo;
   }
+
   .viewport-size::after {
     content: "XS (<767px)";
     font-weight: 600;
   }
 }
+
 /*| DIV COLORING WIDGET */
 /* 
 section {
@@ -462,7 +514,9 @@ div>div>div {
   background-color: $fpoo-bg)
 }
  */
+
 /* | DEV NOTE/UPDATE WIDGET */
+
 .devnote {
   font-size: 12px;
   color: white;
@@ -471,7 +525,7 @@ div>div>div {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: rgba(136, 0, 136, 0.9019607843);
+  background-color: #880088e6;
   padding: 3px 20px;
   width: 100vw;
   text-align: center;
@@ -483,26 +537,26 @@ div>div>div {
 }
 
 .devnote.green {
-  background-color: rgba(0, 102, 0, 0.9019607843);
+  background-color: #006600e6;
   color: white;
 }
 
 .devnote.blue {
-  background-color: rgba(0, 0, 102, 0.9019607843);
+  background-color: #000066e6;
   color: white;
 }
 
 .devnote.yellow {
-  background-color: rgba(255, 242, 0, 0.9019607843);
+  background-color: #fff200e6;
   color: black;
 }
 
 .devnote.cyan {
-  background-color: rgba(0, 255, 255, 0.9019607843);
+  background-color: #00ffffe6;
   color: black;
 }
 
 .devnote.purple {
-  background-color: rgba(140, 0, 255, 0.9019607843);
+  background-color: #8c00ffe6;
   color: white;
-}/*# sourceMappingURL=utils.css.map */
+}
