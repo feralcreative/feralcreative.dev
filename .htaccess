@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} feralcreative\.dev [NC]
+RewriteCond %{REQUEST_URI} ^/$
+Rewriterule ^(.*)$ http://feralcreative.co/ [L,R=301]

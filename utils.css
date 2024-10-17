@@ -9,14 +9,9 @@
   visibility: none;
 }
 
-.fpob.bg {
-  background: rgba(0, 0, 255, 0.1333333333);
-}
-
 .fpop {
   box-shadow: inset 0px 0px 0px 2px #9b00ff;
 }
-
 .fpop.bg {
   background: rgba(155, 0, 255, 0.2666666667);
 }
@@ -24,7 +19,6 @@
 .fpor {
   box-shadow: inset 0px 0px 0px 2px #f00;
 }
-
 .fpor.bg {
   background: rgba(255, 0, 0, 0.1333333333);
 }
@@ -32,15 +26,13 @@
 .fpoo {
   box-shadow: inset 0px 0px 0px 2px #964b00;
 }
-
-.fpoor {
-  box-shadow: inset 0px 0px 0px 2px #ffa503;
-}
-
 .fpoo.bg {
   background: rgba(150, 75, 0, 0.2);
 }
 
+.fpoor {
+  box-shadow: inset 0px 0px 0px 2px #ffa503;
+}
 .fpoor.bg {
   background: rgba(255, 165, 3, 0.2);
 }
@@ -48,7 +40,6 @@
 .fpoy {
   box-shadow: inset 0px 0px 0px 2px #cc0;
 }
-
 .fpoy.bg {
   background: rgba(204, 204, 0, 0.1333333333);
 }
@@ -56,7 +47,6 @@
 .fpog {
   box-shadow: inset 0px 0px 0px 2px #0a0;
 }
-
 .fpog.bg {
   background: rgba(0, 170, 0, 0.2);
 }
@@ -64,7 +54,6 @@
 .fpoc {
   box-shadow: inset 0px 0px 0px 2px #0ff;
 }
-
 .fpoc.bg {
   background: rgba(0, 255, 255, 0.2);
 }
@@ -72,7 +61,6 @@
 .fpob {
   box-shadow: inset 0px 0px 0px 2px #00f;
 }
-
 .fpob.bg {
   background: rgba(0, 0, 255, 0.1333333333);
 }
@@ -81,10 +69,13 @@
 .fpom {
   box-shadow: inset 0px 0px 0px 2px #f0f;
 }
-
 .fpo.bg,
 .fpom.bg {
   background: rgba(255, 0, 255, 0.1333333333);
+}
+.fpo .out,
+.fpom .out {
+  border-color: #f0f;
 }
 
 .fpo.out,
@@ -101,13 +92,8 @@
   border: 1px solid;
 }
 
-.fpo.out,
-fpom.out {
-  border-color: #f0f;
-}
-
 .fpop.out {
-  border-color: #9b00ff;
+  border-color: 1px solid #9b00ff;
 }
 
 .fpoc.out {
@@ -427,47 +413,4 @@ div>div>div {
   background-color: $fpoo-bg)
 }
  */
-/* | DEV NOTE/UPDATE WIDGET */
-.devnote {
-  font-size: 12px;
-  color: white;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(136, 0, 136, 0.9019607843);
-  padding: 3px 20px;
-  width: 100vw;
-  text-align: center;
-  z-index: 999999999999999;
-}
-
-.devnote > .date {
-  font-weight: 700;
-}
-
-.devnote.green {
-  background-color: rgba(0, 102, 0, 0.9019607843);
-  color: white;
-}
-
-.devnote.blue {
-  background-color: rgba(0, 0, 102, 0.9019607843);
-  color: white;
-}
-
-.devnote.yellow {
-  background-color: rgba(255, 242, 0, 0.9019607843);
-  color: black;
-}
-
-.devnote.cyan {
-  background-color: rgba(0, 255, 255, 0.9019607843);
-  color: black;
-}
-
-.devnote.purple {
-  background-color: rgba(140, 0, 255, 0.9019607843);
-  color: white;
-}/*# sourceMappingURL=utils.css.map */
+/* | DEV NOTE/UPDATE WIDGET *//*# sourceMappingURL=utils.css.map */

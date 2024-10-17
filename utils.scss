@@ -55,6 +55,64 @@ $fpob-bg: #0000ff22;
 $fpoo-bg: #964b0033;
 $fpoor-bg: #ffa50333;
 
+@mixin version {
+  #version h2::after {
+    content: $date;
+  }
+  #version h2 {
+    min-height: 25px;
+    z-index: 999;
+    width: 100vw;
+    padding: 5px 0;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $feral;
+  }
+}
+
+@mixin viewport {
+  body.viewport-widget {
+    padding-top: 25px !important;
+  }
+
+  .viewport-widget {
+    width: 100vw !important;
+    margin: 0 !important;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.95;
+  }
+
+  .viewport-size {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1em;
+    color: white;
+    padding: 5px;
+    font-weight: 400;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .viewport-widget.top {
+    top: 0;
+  }
+
+  .viewport-widget.bottom {
+    bottom: 0;
+  }
+}
+
 .absolute {
   position: absolute !important;
 }
@@ -65,88 +123,74 @@ $fpoor-bg: #ffa50333;
   visibility: none;
 }
 
-.fpob.bg {
-  background: $fpob-bg;
-}
-
 .fpop {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpop;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpop;
   box-shadow: inset 0px 0px 0px 2px $fpop;
-}
-
-.fpop.bg {
-  background: $fpop-bg;
+  &.bg {
+    background: $fpop-bg;
+  }
 }
 
 .fpor {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpor;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpor;
   box-shadow: inset 0px 0px 0px 2px $fpor;
-}
-
-.fpor.bg {
-  background: $fpor-bg;
+  &.bg {
+    background: $fpor-bg;
+  }
 }
 
 .fpoo {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpoo;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpoo;
   box-shadow: inset 0px 0px 0px 2px $fpoo;
+  &.bg {
+    background: $fpoo-bg;
+  }
 }
 
 .fpoor {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpoor;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpoor;
   box-shadow: inset 0px 0px 0px 2px $fpoor;
-}
-
-.fpoo.bg {
-  background: $fpoo-bg;
-}
-
-.fpoor.bg {
-  background: $fpoor-bg;
+  &.bg {
+    background: $fpoor-bg;
+  }
 }
 
 .fpoy {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpoy;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpoy;
   box-shadow: inset 0px 0px 0px 2px $fpoy;
+  &.bg {
+    background: $fpoy-bg;
+  }
 }
-
-.fpoy.bg {
-  background: $fpoy-bg;
-}
-
 .fpog {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpog;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpog;
   box-shadow: inset 0px 0px 0px 2px $fpog;
-}
-
-.fpog.bg {
-  background: $fpog-bg;
+  &.bg {
+    background: $fpog-bg;
+  }
 }
 
 .fpoc {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpoc;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpoc;
   box-shadow: inset 0px 0px 0px 2px $fpoc;
+  &.bg {
+    background: $fpoc-bg;
+  }
 }
-
-.fpoc.bg {
-  background: $fpoc-bg;
-}
-
 .fpob {
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpob;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpob;
   box-shadow: inset 0px 0px 0px 2px $fpob;
-}
-
-.fpob.bg {
-  background: $fpob-bg;
+  &.bg {
+    background: $fpob-bg;
+  }
 }
 
 .fpo,
@@ -154,11 +198,12 @@ $fpoor-bg: #ffa50333;
   -webkit-box-shadow: inset 0px 0px 0px 2px $fpo;
   -moz-box-shadow: inset 0px 0px 0px 2px $fpo;
   box-shadow: inset 0px 0px 0px 2px $fpo;
-}
-
-.fpo.bg,
-.fpom.bg {
-  background: $fpom-bg;
+  &.bg {
+    background: $fpom-bg;
+  }
+  & .out {
+    border-color: $fpom;
+  }
 }
 
 .fpo.out,
@@ -177,13 +222,8 @@ $fpoor-bg: #ffa50333;
   border: 1px solid;
 }
 
-.fpo.out,
-fpom.out {
-  border-color: $fpom;
-}
-
 .fpop.out {
-  border-color: $fpop;
+  border-color: 1px solid $fpop;
 }
 
 .fpoc.out {
@@ -515,46 +555,48 @@ div>div>div {
 
 /* | DEV NOTE/UPDATE WIDGET */
 
-.devnote {
-  font-size: 12px;
-  color: white;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: #880088e6;
-  padding: 3px 20px;
-  width: 100vw;
-  text-align: center;
-  z-index: 999999999999999;
-}
+@mixin devnote {
+  .devnote {
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #880088e6;
+    padding: 3px 20px;
+    width: 100vw;
+    text-align: center;
+    z-index: 999999999999999;
+  }
 
-.devnote > .date {
-  font-weight: 700;
-}
+  .devnote > .date {
+    font-weight: 700;
+  }
 
-.devnote.green {
-  background-color: #006600e6;
-  color: white;
-}
+  .devnote.green {
+    background-color: #006600e6;
+    color: white;
+  }
 
-.devnote.blue {
-  background-color: #000066e6;
-  color: white;
-}
+  .devnote.blue {
+    background-color: #000066e6;
+    color: white;
+  }
 
-.devnote.yellow {
-  background-color: #fff200e6;
-  color: black;
-}
+  .devnote.yellow {
+    background-color: #fff200e6;
+    color: black;
+  }
 
-.devnote.cyan {
-  background-color: #00ffffe6;
-  color: black;
-}
+  .devnote.cyan {
+    background-color: #00ffffe6;
+    color: black;
+  }
 
-.devnote.purple {
-  background-color: #8c00ffe6;
-  color: white;
+  .devnote.purple {
+    background-color: #8c00ffe6;
+    color: white;
+  }
 }
