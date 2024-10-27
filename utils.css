@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! Feral Creative CSS Utilities: https://feralcreative.co */
 .absolute {
   position: absolute !important;
@@ -10,6 +11,8 @@
 }
 
 .fpop {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #9b00ff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #9b00ff;
   box-shadow: inset 0px 0px 0px 2px #9b00ff;
 }
 .fpop.bg {
@@ -17,6 +20,8 @@
 }
 
 .fpor {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #f00;
+  -moz-box-shadow: inset 0px 0px 0px 2px #f00;
   box-shadow: inset 0px 0px 0px 2px #f00;
 }
 .fpor.bg {
@@ -24,6 +29,8 @@
 }
 
 .fpoo {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #964b00;
+  -moz-box-shadow: inset 0px 0px 0px 2px #964b00;
   box-shadow: inset 0px 0px 0px 2px #964b00;
 }
 .fpoo.bg {
@@ -31,6 +38,8 @@
 }
 
 .fpoor {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #ffa503;
+  -moz-box-shadow: inset 0px 0px 0px 2px #ffa503;
   box-shadow: inset 0px 0px 0px 2px #ffa503;
 }
 .fpoor.bg {
@@ -38,6 +47,8 @@
 }
 
 .fpoy {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #cc0;
+  -moz-box-shadow: inset 0px 0px 0px 2px #cc0;
   box-shadow: inset 0px 0px 0px 2px #cc0;
 }
 .fpoy.bg {
@@ -45,6 +56,8 @@
 }
 
 .fpog {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #0a0;
+  -moz-box-shadow: inset 0px 0px 0px 2px #0a0;
   box-shadow: inset 0px 0px 0px 2px #0a0;
 }
 .fpog.bg {
@@ -52,6 +65,8 @@
 }
 
 .fpoc {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #0ff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #0ff;
   box-shadow: inset 0px 0px 0px 2px #0ff;
 }
 .fpoc.bg {
@@ -59,6 +74,8 @@
 }
 
 .fpob {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #00f;
+  -moz-box-shadow: inset 0px 0px 0px 2px #00f;
   box-shadow: inset 0px 0px 0px 2px #00f;
 }
 .fpob.bg {
@@ -67,6 +84,8 @@
 
 .fpo,
 .fpom {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #f0f;
+  -moz-box-shadow: inset 0px 0px 0px 2px #f0f;
   box-shadow: inset 0px 0px 0px 2px #f0f;
 }
 .fpo.bg,
@@ -88,6 +107,8 @@
 .fpob.out,
 .fpoo.out,
 .fpoor.out {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   border: 1px solid;
 }
@@ -205,7 +226,6 @@ img.missing {
   text-align: center;
 }
 
-/*| VIEWPORT WIDGET */
 /* 
 <section class="viewport-widget top container-fluid">
 <div class="row">
@@ -214,7 +234,7 @@ img.missing {
     </div>
 </section> 
 */
-body.viewport-widget {
+body:has(.viewport-widget) {
   padding-top: 25px !important;
 }
 
@@ -226,13 +246,12 @@ body.viewport-widget {
   top: 0;
   left: 0;
   z-index: 100;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .viewport-size {
   font-family: monospace;
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 0.75rem;
   line-height: 1em;
   color: white;
   padding: 5px;
@@ -250,6 +269,73 @@ body.viewport-widget {
   bottom: 0;
 }
 
+/* LG */
+@media (min-width: 1200px) {
+  .viewport-size {
+    background-color: red;
+  }
+  .viewport-size:after {
+    content: "Lg (>1200px)";
+    font-weight: 600;
+  }
+}
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .viewport-size {
+    background-color: #ffa503;
+  }
+  .viewport-size::after {
+    content: "MD (992 - 1199px)";
+    font-weight: 600;
+  }
+}
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .viewport-size {
+    background-color: #0a0;
+  }
+  .viewport-size::after {
+    content: "SM (768 - 991px)";
+    font-weight: 600;
+  }
+}
+/* XS */
+@media (max-width: 767px) {
+  .viewport-size {
+    background-color: #f0f;
+  }
+  .viewport-size::after {
+    content: "XS (<767px)";
+    font-weight: 600;
+  }
+}
+@media (min-width: 1025px) {
+  .wp.viewport-size {
+    background-color: red;
+  }
+  .wp.viewport-size::after {
+    content: "Desktop (>1024px)";
+    font-weight: 600;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wp.viewport-size {
+    background-color: orange;
+  }
+  .wp.viewport-size::after {
+    content: "Tablet (768 – 1024px)";
+    font-weight: 600;
+  }
+}
+@media (max-width: 767px) {
+  .wp.viewport-size {
+    background-color: green;
+  }
+  .wp.viewport-size::after {
+    content: "Mobile (<768px)";
+    font-weight: 600;
+  }
+}
 /* | Flexbox */
 .flex {
   display: flex;
@@ -346,46 +432,6 @@ body.viewport-widget {
   margin: 0 0 0 15px;
 }
 
-/* LG */
-@media (min-width: 1200px) {
-  .viewport-size {
-    background-color: red;
-  }
-  .viewport-size::after {
-    content: "Lg (>1200px)";
-    font-weight: 600;
-  }
-}
-/* MD */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .viewport-size {
-    background-color: #ffa503;
-  }
-  .viewport-size::after {
-    content: "MD (992 - 1199px)";
-    font-weight: 600;
-  }
-}
-/* SM */
-@media (min-width: 768px) and (max-width: 991px) {
-  .viewport-size {
-    background-color: #0a0;
-  }
-  .viewport-size::after {
-    content: "SM (768 - 991px)";
-    font-weight: 600;
-  }
-}
-/* XS */
-@media (max-width: 767px) {
-  .viewport-size {
-    background-color: #f0f;
-  }
-  .viewport-size::after {
-    content: "XS (<767px)";
-    font-weight: 600;
-  }
-}
 /*| DIV COLORING WIDGET */
 /* 
 section {
@@ -413,4 +459,4 @@ div>div>div {
   background-color: $fpoo-bg)
 }
  */
-/* | DEV NOTE/UPDATE WIDGET *//*# sourceMappingURL=utils.css.map */
+/* | DEV NOTE/UPDATE WIDGET */

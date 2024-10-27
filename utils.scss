@@ -1,6 +1,6 @@
 /*! Feral Creative CSS Utilities: https://feralcreative.co */
 
-// Updated: 05 OCT 2024 1602 PDT (UTC−07:00)
+// Updated: 24 OCT 2024 0831 PDT (UTC−07:00)
 
 // To use these, add this to your CSS file:
 // | @import url("https://feralcreative.dev/utils.css");
@@ -28,32 +28,13 @@
 // * Important
 // ! Alert
 // ? Question
-// // Dark
+/// Warning
 // TODO: To do
 // -  Strikethrough (triple dash)
 // ^^ Notes
+//@ media query
 
-$feral: #808;
-$fpo: #f0f;
-$fpom: #f0f;
-$fpop: #9b00ff;
-$fpoc: #0ff;
-$fpoy: #cc0;
-$fpor: #f00;
-$fpog: #0a0;
-$fpob: #00f;
-$fpoo: #964b00;
-$fpoor: #ffa503;
-$fpo-bg: #ff00ff22;
-$fpom-bg: #ff00ff22;
-$fpop-bg: #9b00ff44;
-$fpoc-bg: #00ffff33;
-$fpoy-bg: #cccc0022;
-$fpor-bg: #ff000022;
-$fpog-bg: #00aa0033;
-$fpob-bg: #0000ff22;
-$fpoo-bg: #964b0033;
-$fpoor-bg: #ffa50333;
+@import "./sass/variables";
 
 @mixin version {
   #version h2::after {
@@ -72,44 +53,6 @@ $fpoor-bg: #ffa50333;
     bottom: 0;
     left: 0;
     background-color: $feral;
-  }
-}
-
-@mixin viewport {
-  body.viewport-widget {
-    padding-top: 25px !important;
-  }
-
-  .viewport-widget {
-    width: 100vw !important;
-    margin: 0 !important;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    opacity: 0.95;
-  }
-
-  .viewport-size {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 1em;
-    color: white;
-    padding: 5px;
-    font-weight: 400;
-    display: block;
-    margin: auto;
-    text-align: center;
-  }
-
-  .viewport-widget.top {
-    top: 0;
-  }
-
-  .viewport-widget.bottom {
-    bottom: 0;
   }
 }
 
@@ -335,7 +278,7 @@ img.missing {
   text-align: center;
 }
 
-/*| VIEWPORT WIDGET */
+//| VIEWPORT WIDGET */
 /* 
 <section class="viewport-widget top container-fluid">
 <div class="row">
@@ -344,7 +287,7 @@ img.missing {
     </div>
 </section> 
 */
-body.viewport-widget {
+body:has(.viewport-widget) {
   padding-top: 25px !important;
 }
 
@@ -356,13 +299,12 @@ body.viewport-widget {
   top: 0;
   left: 0;
   z-index: 100;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .viewport-size {
   font-family: monospace;
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 0.75rem;
   line-height: 1em;
   color: white;
   padding: 5px;
@@ -378,6 +320,83 @@ body.viewport-widget {
 
 .viewport-widget.bottom {
   bottom: 0;
+}
+
+/* LG */
+@media (min-width: 1200px) {
+  .viewport-size {
+    background-color: red;
+    &:after {
+      content: "Lg (>1200px)";
+      font-weight: 600;
+    }
+  }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .viewport-size {
+    background-color: $fpoor;
+    &::after {
+      content: "MD (992 - 1199px)";
+      font-weight: 600;
+    }
+  }
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .viewport-size {
+    background-color: $fpog;
+    &::after {
+      content: "SM (768 - 991px)";
+      font-weight: 600;
+    }
+  }
+}
+
+/* XS */
+@media (max-width: 767px) {
+  .viewport-size {
+    background-color: $fpo;
+    &::after {
+      content: "XS (<767px)";
+      font-weight: 600;
+    }
+  }
+}
+
+//@ DESKTOP
+@media (min-width: 1025px) {
+  .wp.viewport-size {
+    background-color: red;
+    &::after {
+      content: "Desktop (>1024px)";
+      font-weight: 600;
+    }
+  }
+}
+
+//@ TABLET
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wp.viewport-size {
+    background-color: orange;
+    &::after {
+      content: "Tablet (768 – 1024px)";
+      font-weight: 600;
+    }
+  }
+}
+
+//@ MOBILE
+@media (max-width: 767px) {
+  .wp.viewport-size {
+    background-color: green;
+    &::after {
+      content: "Mobile (<768px)";
+      font-weight: 600;
+    }
+  }
 }
 
 /* | Flexbox */
@@ -475,54 +494,6 @@ body.viewport-widget {
 
 .grid-widget .grid-column:last-child {
   margin: 0 0 0 15px;
-}
-
-/* LG */
-@media (min-width: 1200px) {
-  .viewport-size {
-    background-color: red;
-  }
-
-  .viewport-size::after {
-    content: "Lg (>1200px)";
-    font-weight: 600;
-  }
-}
-
-/* MD */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .viewport-size {
-    background-color: $fpoor;
-  }
-
-  .viewport-size::after {
-    content: "MD (992 - 1199px)";
-    font-weight: 600;
-  }
-}
-
-/* SM */
-@media (min-width: 768px) and (max-width: 991px) {
-  .viewport-size {
-    background-color: $fpog;
-  }
-
-  .viewport-size::after {
-    content: "SM (768 - 991px)";
-    font-weight: 600;
-  }
-}
-
-/* XS */
-@media (max-width: 767px) {
-  .viewport-size {
-    background-color: $fpo;
-  }
-
-  .viewport-size::after {
-    content: "XS (<767px)";
-    font-weight: 600;
-  }
 }
 
 /*| DIV COLORING WIDGET */
