@@ -1,0 +1,9 @@
+To replace CSS variables with Sass:
+
+Find:
+
+var$$--([a-zA-Z0-9_-]+)$$
+
+Replace:
+
+$$$1

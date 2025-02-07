@@ -1,0 +1,14 @@
+body {
+  background-color: #808;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+}
+
+.content {
+  text-align: center;
+}
