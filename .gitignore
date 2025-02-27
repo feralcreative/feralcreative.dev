@@ -14,3 +14,6 @@ wp-admin
 wp-content/cache
 wp-content/languages
 wp-content/plugins
+**/*.json
+**/*.csv
+**/*.env
