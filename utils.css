@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! Feral Creative CSS Utilities v2025.04.18.0649: https://feralcreative.co */
 .absolute {
   position: absolute !important;
@@ -269,58 +270,69 @@ body:has(.viewport-widget) {
   bottom: 0;
 }
 
-/* XL */
+/* X-Small (xs) - <576px */
+@media (max-width: 575.98px) {
+  .viewport-size {
+    background-color: #f44336;
+    color: white;
+  }
+  .viewport-size:after {
+    content: "XS (<576px)";
+    font-weight: 600;
+  }
+}
+/* Small (sm) - ≥576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .viewport-size {
+    background-color: #ff9800;
+    color: black;
+  }
+  .viewport-size:after {
+    content: "SM (≥576px)";
+    font-weight: 600;
+  }
+}
+/* Medium (md) - ≥768px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .viewport-size {
+    background-color: #ffeb3b;
+    color: black;
+  }
+  .viewport-size:after {
+    content: "MD (≥768px)";
+    font-weight: 600;
+  }
+}
+/* Large (lg) - ≥992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .viewport-size {
+    background-color: #4caf50;
+    color: white;
+  }
+  .viewport-size:after {
+    content: "LG (≥992px)";
+    font-weight: 600;
+  }
+}
+/* Extra Large (xl) - ≥1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .viewport-size {
+    background-color: #2196f3;
+    color: white;
+  }
+  .viewport-size:after {
+    content: "XL (≥1200px)";
+    font-weight: 600;
+  }
+}
+/* Extra Extra Large (xxl) - ≥1400px */
 @media (min-width: 1400px) {
   .viewport-size {
-    background-color: blue;
+    background-color: #9c27b0;
     color: white;
   }
   .viewport-size:after {
-    content: "XL (>1400px)";
-    font-weight: 600;
-  }
-}
-/* LG */
-@media (min-width: 992px) and (max-width: 1399px) {
-  .viewport-size {
-    background-color: green;
-    color: white;
-  }
-  .viewport-size:after {
-    content: "LG (992-1399px)";
-    font-weight: 600;
-  }
-}
-/* MD */
-@media (min-width: 768px) and (max-width: 991px) {
-  .viewport-size {
-    background-color: yellow;
-    color: black;
-  }
-  .viewport-size:after {
-    content: "MD (768-991px)";
-    font-weight: 600;
-  }
-}
-/* SM */
-@media (min-width: 576px) and (max-width: 767px) {
-  .viewport-size {
-    background-color: orange;
-    color: black;
-  }
-  .viewport-size:after {
-    content: "SM (576-767px)";
-    font-weight: 600;
-  }
-}
-/* XS */
-@media (max-width: 575px) {
-  .viewport-size {
-    background-color: red;
-    color: white;
-  }
-  .viewport-size:after {
-    content: "XS (<575px)";
+    content: "XXL (≥1400px)";
     font-weight: 600;
   }
 }
