@@ -1,6 +1,6 @@
 /*! Feral Creative CSS Utilities v2025.04.18.0649: https://feralcreative.co */
 
-// Updated: 
+// Updated:
 
 // To use these, add this to your CSS file:
 //| @import url("https://feralcreative.dev/utils.css");
@@ -36,7 +36,7 @@
 //~ information
 //# marker
 
-@import "./sass/variables";
+@use "variables" as *;
 
 @mixin version {
   #version h2::after {
@@ -290,19 +290,28 @@ img.missing {
 </section> 
 */
 body:has(.viewport-widget) {
-  padding-top: 25px !important;
+  padding-top: 1.5em !important;
 }
 
 .viewport-widget {
   width: 100vw !important;
   margin: 0 !important;
+  padding: 0 !important;
+  position: fixed !important;
+  display: flex !important;
   align-items: center;
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  opacity: 0.9;
+  justify-content: center;
+  left: 0 !important;
+  z-index: 100 !important;
+  opacity: 0.9 !important;
+  height: 1rem;
+  min-height: 1rem;
+  &.top {
+    top: 0 !important;
+  }
+  &.bottom {
+    bottom: 0 !important;
+  }
 }
 
 .viewport-size {
@@ -310,19 +319,15 @@ body:has(.viewport-widget) {
   font-size: 0.75rem;
   line-height: 1em;
   color: white;
-  padding: 5px;
   font-weight: 400;
-  display: block;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   text-align: center;
-}
-
-.viewport-widget.top {
-  top: 0;
-}
-
-.viewport-widget.bottom {
-  bottom: 0;
+  width: 100vw !important;
+  height: 1rem;
+  min-height: 1rem;
+  padding: 0;
 }
 
 /* X-Small (xs) - <576px */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth</title>
+    <link rel="stylesheet" href="/style/style.min.css">
+</head>
+<body>
+
+
+    <div id="auth-code-container">
+        <h1>Auth Code</h1>
+
+        <textarea id="auth-code" placeholder="Auth code will appear here"></textarea>
+        <button onclick="copyCode()">Copy</button>
+    </div>
+
+
+
+    <script>
+        function copyCode() {
+            const code = document.getElementById("auth-code").value;
+            navigator.clipboard.writeText(code);
+        }
+    </script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        document.getElementById("auth-code").value = code;
+    </script>
+
+
+</body>
+</html>
