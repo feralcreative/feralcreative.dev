@@ -121,9 +121,13 @@ storybook-static/
 .cache/
 .parcel-cache/
 .sass-cache/
-*.css
-*.css.map
 *.js.map
+
+## Compiled style docs
+*.css
+*.min.css
+*.css.map
+
 
 # Database files
 *.sql
