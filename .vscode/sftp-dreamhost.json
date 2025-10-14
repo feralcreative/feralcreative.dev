@@ -1,0 +1,31 @@
+{
+  "name": "securesite.dev",
+  "host": "iad1-shared-b8-45.dreamhost.com",
+  "protocol": "sftp",
+  "port": 22,
+  "username": "feraldev",
+  "agent": "$SSH_AUTH_SOCK",
+  "remotePath": "/home/feraldev/feralcreative.dev",
+  "uploadOnSave": false,
+  "useTempFile": false,
+  "openSsh": false,
+  "ignore": [
+    "**/_*",
+    "**/.DS_Store",
+    "**/.env",
+    "**/.env.example",
+    "**/.git**",
+    "**/.github",
+    "**/.vscode",
+    "*.clasp*",
+    "authorized_keys",
+    "appsscript.json",
+    "**/libs",
+    "**/gs",
+    "**/docs",
+    "*.scss",
+    "*.md",
+    "*.css.map",
+    "*.augment"
+  ]
+}
