@@ -102,9 +102,9 @@ storybook-static/
 *.js.map
 
 ## Compiled style docs
-*.css
-*.min.css
-*.css.map
+#*.css
+#*.min.css
+#*.css.map
 
 
 # Database files
