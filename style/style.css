@@ -1,0 +1,20 @@
+body {
+  background-color: #808;
+  margin: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: white;
+}
+
+.content {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
