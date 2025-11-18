@@ -1,3 +1,5 @@
+# Ignore WordPress backup files
+**/*.wpress
 # Ignore macOS system files
 **/.DS_Store
 # Ignore archive folders
@@ -12,14 +14,34 @@
 **/*.mp4
 **/*.mov
 **/*.mkv
+# Ignore WordPress core folders
+wp-includes/
+wp-admin/
+wp-content/cache/
+wp-content/languages/
+wp-content/plugins/
 # Ignore Node.js modules
 **/node_modules
 # Ignore environment variable files
 **/*.env
+# Ignore WordPress PHP files starting with wp-
+**/wp-*.php
+# Ignore the Twenty Twenty theme and its variations
+**/wp-content/themes/twenty*/
+# Ignore specific backup files
+wp-content/ai1wm-backups/*
+# Ignore XML-RPC file
+xmlrpc.php
+# Ignore readme and license files
+readme.html
+license.txt
+# Ignore the main index.php file
+/index.php
 # Ignore well-known directory
 .well-known/
 
 # IDE and Editor files
+.vscode/
 .idea/
 *.swp
 *.swo
@@ -102,9 +124,9 @@ storybook-static/
 *.js.map
 
 ## Compiled style docs
-#*.css
-#*.min.css
-#*.css.map
+*.css
+*.min.css
+*.css.map
 
 
 # Database files
@@ -114,6 +136,8 @@ storybook-static/
 *.db
 
 # Configuration files with sensitive data
+config.php
+wp-config-local.php
 .htaccess.backup
 .htpasswd
 
@@ -199,12 +223,16 @@ docker-compose.override.yml
 serverless.yml.bak
 
 # Miscellaneous
+.augment
 .DS_Store?
 Icon?
 ._*
 .Spotlight-V100
 .Trashes
 *.orig
+.vscode/settings.json
 .history/
 **/_archive
 **/_deprecated
+**/.syncthing*
+**/.sync-conflict*
