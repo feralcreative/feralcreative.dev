@@ -1,4 +1,4 @@
-/*! Feral Creative CSS Utilities v2025.07.06.1532: https://feralcreative.co */
+/*! Feral Creative CSS Utilities v2025.12.14.1421: https://feralcreative.co */
 
 // Updated:
 
@@ -36,7 +36,61 @@
 //~ information
 //# marker
 
-@use "variables" as *;
+@use "style/variables" as *;
+
+// Dev Borders
+$dev-border-colors: (
+  aq: aqua,
+  k: black,
+  b: blue,
+  br: brown,
+  c: cyan,
+  go: gold,
+  gr: gray,
+  g: green,
+  i: ivory,
+  kh: khaki,
+  l: lime,
+  m: magenta,
+  ma: maroon,
+  nv: navy,
+  ov: olive,
+  o: orange,
+  pk: pink,
+  pu: purple,
+  r: red,
+  s: silver,
+  t: teal,
+  tu: turquoise,
+  v: violet,
+  w: white,
+  y: yellow,
+);
+
+$dev-border-styles: (
+  "dash": dashed,
+  "dot": dotted,
+);
+
+// Dev border mixin
+// Usage: @include dev(); // default red, 1px solid
+// Usage: @include dev(b); // blue, 1px solid
+// Usage: @include dev(g, 2px); // green, 2px solid
+// Usage: @include dev(pu, 3px, dashed); // purple, 3px dashed
+// Usage: @include dev(pu, 3px, "-"); // purple, 3px dashed (shorthand)
+// Usage: @include dev(b, 2px, "."); // blue, 2px dotted (shorthand)
+// Usage: @include dev(#ff00ff); // custom hex color, 1px solid
+// Usage: @include dev(#00ff00, 2px, dotted); // custom hex, 2px dotted
+
+@mixin dev($color: r, $width: 1px, $style: "—") {
+  // Check if color is a key in the map, otherwise use it as-is (for hex codes)
+  $resolved-color: if(map-has-key($dev-border-colors, $color), map-get($dev-border-colors, $color), $color);
+
+  // Check if style is a key in the map, otherwise use it as-is
+  $resolved-style: if(map-has-key($dev-border-styles, $style), map-get($dev-border-styles, $style), $style);
+
+  border: $width $resolved-style $resolved-color !important;
+}
 
 @mixin version {
   #version h2::after {
@@ -65,7 +119,7 @@
 .hidden,
 .hide,
 .invisible {
-  visibility: none;
+  display: none;
 }
 
 .fpop {
@@ -168,7 +222,7 @@
 }
 
 .fpop.out {
-  border-color: 1px solid $fpop;
+  border-color: $fpop;
 }
 
 .fpoc.out {
@@ -199,7 +253,7 @@
   border-color: $fpoor;
 }
 
-fpom .nc::before {
+.fpom .nc::before {
   content: "NEED CONTENT \A";
   font-size: inherit !important;
 }
@@ -286,6 +340,7 @@ body:has(.viewport-widget) {
   padding-top: 1.5em !important;
 }
 
+#viewport-widget,
 .viewport-widget {
   width: 100vw !important;
   margin: 0 !important;
@@ -296,11 +351,9 @@ body:has(.viewport-widget) {
   justify-content: center;
   left: 0 !important;
   z-index: 100 !important;
-  opacity: 0.9 !important;
-  height: 1rem;
-  min-height: 1rem;
+  opacity: 0.95 !important;
   &.top {
-    top: 0 !important;
+    top: 0px !important;
   }
   &.bottom {
     bottom: 0 !important;
@@ -318,8 +371,6 @@ body:has(.viewport-widget) {
   display: flex;
   text-align: center;
   width: 100vw !important;
-  height: 1rem;
-  min-height: 1rem;
   padding: 0;
 }
 
@@ -327,7 +378,7 @@ body:has(.viewport-widget) {
 @media (max-width: 575px) {
   .viewport-size {
     background-color: #f44336; // red;
-    color: black !important;
+    color: white !important;
     &:after {
       content: "XS (<576px)";
       font-weight: 600;
@@ -375,7 +426,7 @@ body:has(.viewport-widget) {
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .viewport-size {
     background-color: #2196f3; // blue;
-    color: black !important;
+    color: white !important;
     &:after {
       content: "XL (≥1200px)";
       font-weight: 600;
@@ -566,35 +617,4 @@ div>div>div {
     background-color: #8c00ffe6;
     color: white;
   }
-}
-
-#viewport-widget {
-  display: block;
-  align-items: center;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  opacity: 0.9;
-  width: 100vw !important;
-  margin: 0 !important;
-  font-size: 15px;
-  padding: 0;
-}
-
-.viewport-size {
-  display: block;
-  width: 100vw;
-  min-width: 100vw;
-  margin: auto;
-  padding-top: 5px;
-  padding-right: 0;
-  padding-bottom: 6px;
-  padding-left: 0;
-  font-size: 13px;
-  font-family: monospace;
-  font-weight: 400;
-  line-height: 1em;
-  color: white;
-  text-align: center;
 }
